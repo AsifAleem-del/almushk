@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Mushk — Itar & Perfume</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Al <span>Mushk</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#products">Collection</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">Our Story</a>
+  <a href="#products" onclick="toggleMenu()">Collection</a>
+  <a href="#why-us" onclick="toggleMenu()">Why Us</a>
+  <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-container">
+    <div class="hero-content">
+      <span class="hero-badge">✦ LUXURY ARABIAN FRAGRANCE ✦</span>
+      <h1>The Soul of <em>Arabian</em> Oud & Perfume</h1>
+      <p>Experience the timeless artistry of handcrafted itar and attars — born from rare woods, precious resins, and
+        ancient traditions passed through generations.</p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn-primary">Explore Collection</a>
+        <a href="#about" class="btn-outline">Our Heritage</a>
+      </div>
+    </div>
+    <div class="hero-img-swiper">
+      <div class="carousel-wrapper">
+        <div class="carousel-track-container" id="trackContainer">
+          <div class="carousel-track" id="track">
+      
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-bg" style="background-image: url('./img/1.png');"></div>
+              <!-- <div class="card-overlay"></div> -->
+              <!-- <div class="card-counter"><strong>01</strong> / 05</div> -->
+              <div class="card-content">
+                <!-- <span class="card-tag">Architecture</span> -->
+                <!-- <h2 class="card-title">Timeless Beauty of the Taj Mahal in Agra</h2>
+                <p class="card-desc">The Taj Mahal is a breathtaking symbol of love, built by Emperor Shah Jahan in memory of
+                  his wife Mumtaz Mahal.</p> -->
+              </div>
+            </div>
+      
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-bg" style="background-image: url('./img/2.png');"></div>
+              <!-- <div class="card-overlay"></div> -->
+              <!-- <div class="card-counter"><strong>02</strong> / 05</div> -->
+              <div class="card-content">
+                <!-- <span class="card-tag">Heritage</span> -->
+                <!-- <h2 class="card-title">Royal Charm of the Pink City, Jaipur</h2>
+                <p class="card-desc">Jaipur is a vibrant city known for its royal heritage, grand palaces, and colorful
+                  culture.</p> -->
+              </div>
+            </div>
+      
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-bg" style="background-image: url('./img/5.png');"></div>
+              <!-- <div class="card-overlay"></div> -->
+              <!-- <div class="card-counter"><strong>03</strong> / 05</div> -->
+              <div class="card-content">
+                <!-- <span class="card-tag">Natural Wonder</span> -->
+                <!-- <h2 class="card-title">Spiritual Grandeur of Akshardham Temple in Delhi</h2>
+                <p class="card-desc">The Swaminarayan Akshardham is a magnificent cultural and spiritual complex dedicated to
+                  Bhagwan Swaminarayan.</p> -->
+              </div>
+            </div>
+      
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-bg" style="background-image: url('./img/3.png');"></div>
+              <!-- <div class="card-overlay"></div> -->
+              <!-- <div class="card-counter"><strong>04</strong> / 05</div> -->
+              <div class="card-content">
+                <!-- <span class="card-tag">Landmark</span> -->
+                <!-- <h2 class="card-title">Sacred Serenity of the Ghats in Varanasi</h2>
+                <p class="card-desc">The ghats of Varanasi, especially Dashashwamedh Ghat, are among the most spiritual places
+                  in India.</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Nav buttons -->
+        <button class="nav-btn prev" id="prevBtn" aria-label="Previous">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button class="nav-btn next" id="nextBtn" aria-label="Next">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      
+        <!-- Dots -->
+        <div class="dots" id="dots"></div>
+      
+        <!-- Thumbnails -->
+        <div class="thumbnails" id="thumbnails" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>✦ PURE OUD EXTRACT</span>
+    <span>✦ HANDCRAFTED ATTAR</span>
+    <span>✦ ALCOHOL FREE</span>
+    <span>✦ LONG LASTING FRAGRANCE</span>
+    <span>✦ PURE OUD EXTRACT</span>
+    <span>✦ HANDCRAFTED ATTAR</span>
+    <span>✦ ALCOHOL FREE</span>
+    <span>✦ LONG LASTING FRAGRANCE</span>
+    <span>✦ PURE OUD EXTRACT</span>
+    <span>✦ HANDCRAFTED ATTAR</span>
+    <span>✦ ALCOHOL FREE</span>
+    <span>✦ LONG LASTING FRAGRANCE</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <span class="section-label">✦ OUR HERITAGE ✦</span>
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="about-img-frame">
+        <div class="about-img-inner">
+          <div class="oud-icon"><img src="./img/1.png" width="100%" /> </div>
+        </div>
+      </div>
+      <div class="about-tag">
+        <span class="num">10+</span>
+        <span class="label">YEARS OF CRAFT</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="section-label" style="text-align:left;">✦ WHO WE ARE ✦</span>
+      <h2>Crafted with <em>Soul,</em> Worn with Pride</h2>
+      <p>Al Mushk is a family legacy of master perfumers rooted in the heart of Arabia. For over two decades, we have sourced only the rarest oud woods from Assam, Cambodia, and the wild forests of Southeast Asia.</p>
+      <p>Each bottle is a journey — from the artisan distillery to your skin. Our attars are alcohol-free, deeply concentrated, and crafted to last beyond the ordinary.</p>
+      <div class="about-features">
+        <div class="about-feat">
+          <div class="feat-icon">🌿</div>
+          <div class="feat-text">
+            <strong>100% NATURAL</strong>
+            <span>Pure botanical extracts, no synthetics</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">🏺</div>
+          <div class="feat-text">
+            <strong>HAND DISTILLED</strong>
+            <span>Traditional deg-bhapka method</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">🚫</div>
+          <div class="feat-text">
+            <strong>ALCOHOL FREE</strong>
+            <span>Safe for all skin types</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">🌍</div>
+          <div class="feat-text">
+            <strong>WORLDWIDE SHIPPING</strong>
+            <span>Delivered to your doorstep</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <span class="section-label">✦ OUR COLLECTION ✦</span>
+  <h2 class="section-title">Signature Fragrances</h2>
+  <p class="section-sub">Each fragrance is a story. Find yours.</p>
+  <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+  <div class="products-grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <span class="product-badge">HOT DEAL</span>
+      <div class="product-image">
+        <div class="product-image-shine"></div>
+        <div class="product-emoji"><img src="./img/1.png" width="100%" alt="Al Mushk Oud Khas" /></div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">✦ OUD ATTAR ✦</div>
+        <div class="product-name">Al Mushk Oud Khas</div>
+        <div class="product-desc">Rare Assam oud distilled over 72 hours — smoky, woody, with a deep animalic heart that lasts all day.</div>
+        <div class="product-pricing">
+          <span class="price-original">₹3,500</span>
+          <span class="price-offer">₹2,499</span>
+          <span class="price-discount">28% OFF</span>
+        </div>
+        <div class="product-divider"></div>
+        <div class="product-footer">
+          <div class="product-notes">
+            <strong>NOTES</strong>
+            Oud · Amber · Sandalwood
+          </div>
+          <button class="add-to-cart" onclick="whatsappOrder('Al Mushk Oud Khas - ₹2,499')">ORDER</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <span class="product-badge new">NEW</span>
+      <div class="product-image">
+        <div class="product-image-shine"></div>
+        <div class="product-emoji"><img src="./img/2.png" width="100%" alt="Gulabi Musk Rose" /></div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">✦ FLORAL ATTAR ✦</div>
+        <div class="product-name">Gulabi Musk Rose</div>
+        <div class="product-desc">A romantic bouquet of Taif roses kissed with white musk — delicate, feminine, eternally beautiful.</div>
+        <div class="product-pricing">
+          <span class="price-original">₹2,200</span>
+          <span class="price-offer">₹1,599</span>
+          <span class="price-discount">27% OFF</span>
+        </div>
+        <div class="product-divider"></div>
+        <div class="product-footer">
+          <div class="product-notes">
+            <strong>NOTES</strong>
+            Rose · Musk · Jasmine
+          </div>
+          <button class="add-to-cart" onclick="whatsappOrder('Gulabi Musk Rose - ₹1,599')">ORDER</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <span class="product-badge">BESTSELLER</span>
+      <div class="product-image">
+        <div class="product-image-shine"></div>
+        <div class="product-emoji"><img src="./img/3.png" width="100%" alt="Shab-e-Oud Noir" /></div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">✦ ORIENTAL ATTAR ✦</div>
+        <div class="product-name">Shab-e-Oud Noir</div>
+        <div class="product-desc">Inspired by Arabian nights — dark Cambodian oud, rich resins, and vanilla accord that envelopes the senses.</div>
+        <div class="product-pricing">
+          <span class="price-original">₹4,800</span>
+          <span class="price-offer">₹3,299</span>
+          <span class="price-discount">31% OFF</span>
+        </div>
+        <div class="product-divider"></div>
+        <div class="product-footer">
+          <div class="product-notes">
+            <strong>NOTES</strong>
+            Oud · Vanilla · Resin
+          </div>
+          <button class="add-to-cart" onclick="whatsappOrder('Shab-e-Oud Noir - ₹3,299')">ORDER</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <div class="product-image-shine"></div>
+        <div class="product-emoji"><img src="./img/4.png" width="100%" alt="Chandan Santal Pure" /></div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">✦ WOODY ATTAR ✦</div>
+        <div class="product-name">Chandan Santal Pure</div>
+        <div class="product-desc">Steam-distilled Mysore sandalwood — creamy, milky, and meditative. Perfect for daily wear and prayer.</div>
+        <div class="product-pricing">
+          <span class="price-original">₹1,800</span>
+          <span class="price-offer">₹1,199</span>
+          <span class="price-discount">33% OFF</span>
+        </div>
+        <div class="product-divider"></div>
+        <div class="product-footer">
+          <div class="product-notes">
+            <strong>NOTES</strong>
+            Sandalwood · Cream · Cedar
+          </div>
+          <button class="add-to-cart" onclick="whatsappOrder('Chandan Santal Pure - ₹1,199')">ORDER</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <span class="product-badge">SALE</span>
+      <div class="product-image">
+        <div class="product-image-shine"></div>
+        <div class="product-emoji"><img src="./img/5.png" width="100%" alt="Amber Sultani Gold" /></div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">✦ LUXURY BLEND ✦</div>
+        <div class="product-name">Amber Sultani Gold</div>
+        <div class="product-desc">A majestic blend of Baltic amber, aged oud, and saffron threads — warm, golden, and utterly regal.</div>
+        <div class="product-pricing">
+          <span class="price-original">₹5,500</span>
+          <span class="price-offer">₹3,799</span>
+          <span class="price-discount">31% OFF</span>
+        </div>
+        <div class="product-divider"></div>
+        <div class="product-footer">
+          <div class="product-notes">
+            <strong>NOTES</strong>
+            Amber · Saffron · Oud
+          </div>
+          <button class="add-to-cart" onclick="whatsappOrder('Amber Sultani Gold - ₹3,799')">ORDER</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <span class="product-badge new">NEW</span>
+      <div class="product-image">
+        <div class="product-image-shine"></div>
+        <div class="product-emoji"><img src="./img/6.png" width="100%" alt="Bahar-e-Kashmir" /></div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">✦ FRESH ATTAR ✦</div>
+        <div class="product-name">Bahar-e-Kashmir</div>
+        <div class="product-desc">A breath of spring — fresh iris, green cardamom, and light musk inspired by the meadows of Kashmir.</div>
+        <div class="product-pricing">
+          <span class="price-original">₹1,500</span>
+          <span class="price-offer">₹999</span>
+          <span class="price-discount">33% OFF</span>
+        </div>
+        <div class="product-divider"></div>
+        <div class="product-footer">
+          <div class="product-notes">
+            <strong>NOTES</strong>
+            Iris · Cardamom · Musk
+          </div>
+          <button class="add-to-cart" onclick="whatsappOrder('Bahar-e-Kashmir - ₹999')">ORDER</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <span class="section-label">✦ WHY CHOOSE US ✦</span>
+  <h2 class="section-title">The Al Mushk Promise</h2>
+  <p class="section-sub">Quality you can feel. Luxury you can afford.</p>
+  <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-icon-wrap">🌿</div>
+      <h3>100% NATURAL</h3>
+      <p>No synthetic chemicals. Every drop is pure, botanical, and cruelty-free.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap">🚚</div>
+      <h3>FAST DELIVERY</h3>
+      <p>Pan-India delivery in 2–4 days. International shipping available.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap">🔒</div>
+      <h3>AUTHENTICITY SEAL</h3>
+      <p>Every product verified and sealed. Guaranteed authentic or money back.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap">💬</div>
+      <h3>EXPERT GUIDANCE</h3>
+      <p>Personal consultation with our master perfumers to find your signature scent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <span class="section-label">✦ CUSTOMER LOVE ✦</span>
+  <h2 class="section-title">What Our Patrons Say</h2>
+  <p class="section-sub">Thousands of satisfied customers across India and beyond.</p>
+  <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Al Mushk is absolutely divine. I've tried expensive designer fragrances but nothing compares to this authentic attar. It lasts over 12 hours on my skin!</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-author">Mohammed Rashid</div>
+      <div class="testimonial-location">Dubai, UAE</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">Ordered the Gulabi Musk Rose as a gift for my wife — she absolutely loves it. The packaging is elegant, delivery was fast, and the scent is heavenly. 10/10!</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-author">Priya Sharma</div>
+      <div class="testimonial-location">Mumbai, India</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">The Amber Sultani Gold is worth every rupee. A true luxury experience. I use just one drop and the compliments don't stop. Al Mushk is the real deal.</p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-author">Abdul Karim</div>
+      <div class="testimonial-location">Lucknow, India</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to Find Your Signature Scent?</h2>
+  <p>Talk to our experts today and get a personalized recommendation — absolutely free.</p>
+  <div class="cta-buttons">
+    <a href="tel:+918447861012" class="cta-btn-dark">
+      <span>📞</span> Call Us Now
+    </a>
+    <a href="https://wa.me/918447861012?text=Hello! I'd like to know more about your fragrances." target="_blank" class="cta-btn-white">
+      <span>💬</span> WhatsApp Us
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <span class="section-label">✦ GET IN TOUCH ✦</span>
+  <h2 class="section-title">Contact Us</h2>
+  <p class="section-sub">We'd love to hear from you. Reach out anytime.</p>
+  <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Let's Talk Fragrance</h3>
+      <div class="contact-detail">
+        <div class="contact-icon">📞</div>
+        <div class="contact-detail-text">
+          <strong>PHONE</strong>
+          <a href="tel:+918447861012">+91 98765 43210</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">💬</div>
+        <div class="contact-detail-text">
+          <strong>WHATSAPP</strong>
+          <a href="https://wa.me/918447861012" target="_blank">+91 98765 43210</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📧</div>
+        <div class="contact-detail-text">
+          <strong>EMAIL</strong>
+          <a href="mailto:info@aloudroyal.com">info@aloudroyal.com</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail-text">
+          <strong>SHOP ADDRESS</strong>
+          <span>Khushbu Bazaar, Old City<br>Lucknow, Uttar Pradesh - 226001</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <iframe width="500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.255639175413!2d77.2144295!3d28.5320349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3a1fdc1db8b%3A0x1392394f33179beb!2sAl-Mushk!5e0!3m2!1sen!2sin!4v1777125466006!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- <div class="form-group">
+        <label>YOUR NAME</label>
+        <input type="text" placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label>PHONE NUMBER</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-group">
+        <label>YOUR MESSAGE</label>
+        <textarea placeholder="Tell us what fragrance you're looking for..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%; text-align:center;" onclick="sendMessage()">SEND MESSAGE</button> -->
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">Al <span>Mushk</span></a>
+      <p>Masters of Arabian perfumery for over 10 years. Bringing the finest itar and attars to fragrance lovers worldwide.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">f</a>
+        <a href="#" class="social-btn">📸</a>
+        <a href="#" class="social-btn">🐦</a>
+        <a href="https://wa.me/918447861012" class="social-btn" target="_blank">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>COLLECTION</h4>
+      <ul>
+        <li><a href="#products">Oud Attars</a></li>
+        <li><a href="#products">Floral Attars</a></li>
+        <li><a href="#products">Oriental Blends</a></li>
+        <li><a href="#products">Woody Fragrances</a></li>
+        <li><a href="#products">Gift Sets</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>POLICIES</h4>
+      <ul>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Al Mushk. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FIXED MOBILE ACTION BAR -->
+<div class="mobile-action-bar">
+  <a href="tel:+918447861012" class="mobile-action-btn mobile-call-btn">
+    <span class="btn-icon">📞</span>
+    <span>CALL NOW</span>
+  </a>
+  <a href="https://wa.me/918447861012?text=Hello! I'd like to know more about your perfumes." target="_blank" class="mobile-action-btn mobile-whatsapp-btn">
+    <span class="btn-icon">💬</span>
+    <span>WHATSAPP</span>
+  </a>
+</div>
+
+<script>
+  // Mobile menu toggle
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    menu.classList.toggle('open');
+    overlay.classList.toggle('open');
+  }
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // WhatsApp order button
+  function whatsappOrder(product) {
+    const msg = encodeURIComponent(`Hello! I'd like to order:\n\n🛒 ${product}\n\nPlease confirm availability and delivery details.`);
+    window.open(`https://wa.me/918447861012?text=${msg}`, '_blank');
+  }
+
+  // Contact form send
+  function sendMessage() {
+    const name = document.querySelector('.contact-form input[type="text"]').value;
+    const phone = document.querySelector('.contact-form input[type="tel"]').value;
+    const message = document.querySelector('.contact-form textarea').value;
+    if (!name || !phone) {
+      alert('Please fill in your name and phone number.');
+      return;
+    }
+    const msg = encodeURIComponent(`Hello! I'm ${name}.\n📞 ${phone}\n\n${message}`);
+    window.open(`https://wa.me/918447861012?text=${msg}`, '_blank');
+  }
+
+  // Intersection Observer for animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.product-card, .feature-item, .testimonial-card, .about-feat').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+<script src="./js/carosual.js"></script>
+</body>
+</html>
