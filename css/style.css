@@ -1034,7 +1034,7 @@ body { padding-bottom: 60px; }
 .hero-container {flex-direction: column; height: auto;}
 .contact-form iframe {width: 100%;}
 .hero-ornament {display: none;}
-.card {height: auto; min-height:50vh;} .dots {display: none;}
+.card {height: auto;} .dots {display: none;}
 .gold-divider {margin-bottom: 32px;}
 .product-name {font-size: 1.2rem;}
 .product-category{font-size:0.6rem} .product-info {padding: 12px;}
